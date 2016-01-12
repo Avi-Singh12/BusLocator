@@ -19,6 +19,7 @@ public class AdminLogin extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setContentView(R.layout.admin_login);
         Firebase.setAndroidContext(this);
 
         final Firebase myFirebase = new Firebase("https://tjbusfinder.firebaseio.com/");

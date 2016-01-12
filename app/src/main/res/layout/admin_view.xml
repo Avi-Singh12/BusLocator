@@ -9,6 +9,132 @@
         android:layout_height="0dp"
         android:layout_weight="1">
 
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1"
+            android:padding="15dp"
+            android:background="@color/gray"
+            android:id="@+id/busTextView1"
+            android:layout_marginEnd="115dp"
+            android:layout_marginTop="63dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2"
+            android:padding="15dp"
+            android:background="@color/gray"
+            android:id="@+id/busTextView2"
+            android:layout_marginEnd="57dp"
+            android:layout_alignTop="@+id/busTextView1"
+            android:layout_toStartOf="@+id/busTextView1" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="3"
+            android:padding="15dp"
+            android:background="@color/gray"
+            android:id="@+id/busTextView3"
+            android:layout_marginTop="38dp"
+            android:layout_below="@+id/busTextView1"
+            android:layout_alignStart="@+id/busTextView1" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="4"
+            android:padding="15dp"
+            android:background="@color/gray"
+            android:id="@+id/busTextView4"
+            android:layout_alignBottom="@+id/busTextView3"
+            android:layout_alignStart="@+id/busTextView2" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="5"
+            android:padding="15dp"
+            android:background="@color/gray"
+            android:id="@+id/busTextView5"
+            android:layout_marginTop="40dp"
+            android:layout_below="@+id/busTextView3"
+            android:layout_alignStart="@+id/busTextView3" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="6"
+            android:padding="15dp"
+            android:background="@color/gray"
+            android:id="@+id/busTextView6"
+            android:layout_alignTop="@+id/busTextView5"
+            android:layout_alignStart="@+id/busTextView4" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="7"
+            android:padding="15dp"
+            android:background="@color/gray"
+            android:id="@+id/busTextView7"
+            android:layout_marginEnd="115dp"
+            android:layout_above="@+id/busTextView3"
+            android:layout_toStartOf="@+id/busTextView2" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="8"
+            android:padding="15dp"
+            android:background="@color/gray"
+            android:id="@+id/busTextView8"
+            android:layout_above="@+id/busTextView4"
+            android:layout_toStartOf="@+id/busTextView7"
+            android:layout_marginEnd="46dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="10"
+            android:padding="15dp"
+            android:background="@color/gray"
+            android:id="@+id/busTextView10"
+            android:layout_below="@+id/busTextView9"
+            android:layout_alignStart="@+id/busTextView8" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="9"
+            android:padding="15dp"
+            android:background="@color/gray"
+            android:id="@+id/busTextView9"
+            android:layout_above="@+id/busTextView5"
+            android:layout_alignStart="@+id/busTextView7" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="11"
+            android:padding="15dp"
+            android:background="@color/gray"
+            android:id="@+id/busTextView11"
+            android:layout_toEndOf="@+id/busTextView8"
+            android:layout_below="@+id/busTextView6" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="12"
+            android:padding="15dp"
+            android:background="@color/gray"
+            android:id="@+id/busTextView12"
+            android:layout_below="@+id/busTextView11"
+            android:layout_alignStart="@+id/busTextView10" />
     </RelativeLayout>
 
     <RelativeLayout
@@ -16,12 +142,68 @@
         android:layout_height="0dp"
         android:layout_weight="1">
 
-        <ListView
+        <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/listView"
+            android:text="Update"
+            android:id="@+id/updateButton"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true" />
+
+        <TextView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:text="1"
+            android:id="@+id/busLabel1"
+            android:background="@color/lighgray"
+            android:padding="7dp"
+            android:gravity="center_vertical|center_horizontal"
+            android:layout_marginTop="56dp"
             android:layout_alignParentTop="true"
             android:layout_alignParentStart="true" />
+
+        <EditText
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/busNum1"
+            android:layout_alignTop="@+id/busLabel1"
+            android:layout_toEndOf="@+id/busLabel1" />
+
+        <TextView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:text="2"
+            android:id="@+id/busLabel2"
+            android:background="@color/lighgray"
+            android:padding="7dp"
+            android:gravity="center_vertical|center_horizontal"
+            android:layout_below="@+id/busLabel1"
+            android:layout_alignParentStart="true" />
+
+        <EditText
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/busNum2"
+            android:layout_below="@+id/busLabel1"
+            android:layout_toEndOf="@+id/busLabel1" />
+
+        <TextView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:text="3"
+            android:id="@+id/busLabel3"
+            android:background="@color/lighgray"
+            android:padding="7dp"
+            android:gravity="center_vertical|center_horizontal"
+            android:layout_below="@+id/busLabel2"
+            android:layout_alignParentStart="true" />
+
+        <EditText
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/editText"
+            android:layout_alignBottom="@+id/busLabel3"
+            android:layout_toEndOf="@+id/busLabel2" />
     </RelativeLayout>
 
 </LinearLayout>

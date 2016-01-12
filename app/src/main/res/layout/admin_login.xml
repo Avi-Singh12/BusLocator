@@ -3,105 +3,84 @@
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <Button
+
+    <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Create Account"
-        android:id="@+id/createAccountButton"
-        android:layout_marginStart="40dp"
-        android:layout_marginBottom="160dp"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentStart="true" />
+        android:text="Administrator Login"
+        android:textSize="25dp"
+        android:id="@+id/adminLoginTextView"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="154dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:id="@+id/userNameLabel"
+        android:text="User Name*"
+        android:textSize="18dp"
+        android:background="@color/white"
+        android:gravity="center_horizontal|center_vertical"
+        android:layout_below="@+id/adminLoginTextView"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="167dp"
+        android:layout_toStartOf="@+id/userNameEditText" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:id="@+id/passwordLabel"
+        android:text="Password"
+        android:textSize="18dp"
+        android:background="@color/white"
+        android:gravity="center_horizontal|center_vertical"
+        android:layout_marginTop="0dp"
+        android:layout_below="@+id/userNameLabel"
+        android:layout_alignParentStart="true"
+        android:layout_toStartOf="@+id/userNameEditText" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:ems="10"
+        android:padding="7dp"
+        android:id="@+id/userNameEditText"
+        android:background="@color/gray"
+        android:layout_alignTop="@+id/userNameLabel"
+        android:layout_alignParentEnd="true"
+        android:layout_toEndOf="@+id/adminLoginTextView"
+        android:layout_alignStart="@+id/adminLoginTextView" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:inputType="textPassword"
+        android:ems="10"
+        android:id="@+id/passwordEditText"
+        android:background="@color/gray"
+        android:layout_alignTop="@+id/passwordLabel"
+        android:layout_alignParentEnd="true"
+        android:layout_toEndOf="@+id/passwordLabel" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Login"
         android:id="@+id/loginButton"
-        android:layout_marginEnd="40dp"
-        android:layout_alignTop="@+id/createAccountButton"
-        android:layout_alignParentEnd="true" />
-
-    <EditText
-        android:id="@+id/passwordTextView"
-        android:layout_width="wrap_content"
-        android:layout_height="50dp"
-        android:background="@color/gray"
         android:textSize="18dp"
-        android:inputType="textPassword"
-        android:text=""
-        android:ems="10"
-        android:layout_marginBottom="50dp"
-        android:password="false"
-        android:padding="7dp"
-        android:layout_above="@+id/createAccountButton"
-        android:layout_alignStart="@+id/userNameTextView"
-        android:layout_alignEnd="@+id/userNameTextView" />
-
-    <EditText
-        android:id="@+id/userNameTextView"
-        android:layout_width="wrap_content"
-        android:layout_height="50dp"
-        android:textSize="18dp"
-        android:background="@color/gray"
-        android:inputType="textPersonName"
-        android:text=""
-        android:ems="10"
-        android:padding="7dp"
-        android:layout_above="@+id/passwordTextView"
-        android:layout_alignParentEnd="true" />
-
-    <TextView
-        android:id="@+id/usernameLabel"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Username*"
-        android:textSize="18dp"
-        android:textAlignment="center"
-        android:background="@color/white"
-        android:layout_above="@+id/passwordTextView"
-        android:layout_alignTop="@+id/userNameTextView"
-        android:layout_alignParentBottom="false"
-        android:layout_alignWithParentIfMissing="false"
-        android:editable="false"
-        android:gravity="center_vertical|center_horizontal"
-        android:layout_alignParentStart="true"
-        android:layout_toStartOf="@+id/passwordTextView" />
-
-    <TextView
-        android:id="@+id/passwordLabel"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Password"
-        android:textSize="18dp"
-        android:textAlignment="center"
-        android:background="@color/white"
-        android:layout_alignWithParentIfMissing="false"
-        android:editable="false"
-        android:gravity="center_vertical|center_horizontal"
-        android:layout_below="@+id/userNameTextView"
-        android:layout_alignParentStart="true"
-        android:layout_alignBottom="@+id/passwordTextView"
-        android:layout_toStartOf="@+id/passwordTextView" />
+        android:layout_below="@+id/passwordLabel"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="89dp" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:text="*In form of an email"
-        android:id="@+id/starTextView"
+        android:id="@+id/textView"
         android:background="@color/white"
         android:padding="5dp"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Administrator Login"
-        android:id="@+id/adminLoginTextView"
-        android:layout_above="@+id/userNameTextView"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="42dp" />
-
 </RelativeLayout>
