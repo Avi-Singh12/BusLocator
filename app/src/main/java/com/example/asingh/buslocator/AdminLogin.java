@@ -23,8 +23,8 @@ public class AdminLogin extends Activity {
         Firebase.setAndroidContext(this);
 
         final Firebase myFirebase = new Firebase("https://tjbusfinder.firebaseio.com/");
-        final EditText userNameTextField = (EditText) findViewById(R.id.userNameTextView);
-        final EditText passwordTextField = (EditText) findViewById(R.id.passwordTextView);
+        final EditText userNameTextField = (EditText) findViewById(R.id.userNameEditText);
+        final EditText passwordTextField = (EditText) findViewById(R.id.passwordEditText);
         final Button loginButton = (Button) findViewById(R.id.loginButton);
 
         loginButton.setOnClickListener(new View.OnClickListener() {
