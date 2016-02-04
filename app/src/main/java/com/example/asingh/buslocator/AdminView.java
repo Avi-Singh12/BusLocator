@@ -71,7 +71,6 @@ public class AdminView extends Activity {
                 myFirebase.child("12").setValue(busSpot12);
 
                 Toast.makeText(AdminView.this, "Bus Locations Successfully Updated", Toast.LENGTH_SHORT).show();
-
             }
         });
 

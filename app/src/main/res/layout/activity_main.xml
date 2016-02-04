@@ -3,16 +3,18 @@
     android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".MainActivity">
+    android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".MainActivity"
+    android:background="@color/babyblue">
 
     <TextView android:text="Bus Locator" android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="81dp"
+        android:layout_marginTop="87dp"
         android:textSize="50dp"
         android:id="@+id/busLocatorTextView"
+        android:elegantTextHeight="false"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:elegantTextHeight="false" />
+        android:textColor="@color/red"/>
 
     <TextView
         android:layout_width="wrap_content"
@@ -20,26 +22,34 @@
         android:text="Choose a view"
         android:textSize="20dp"
         android:id="@+id/choiceTextView"
-        android:layout_marginBottom="50dp"
-        android:layout_above="@+id/adminButton"
-        android:layout_centerHorizontal="true" />
+        android:layout_below="@+id/imageView"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="49dp" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Administrator"
         android:id="@+id/adminButton"
-        android:layout_marginStart="101dp"
-        android:layout_centerVertical="true"
-        android:layout_alignParentStart="true" />
+        android:layout_below="@+id/choiceTextView"
+        android:layout_toStartOf="@+id/choiceTextView"
+        android:layout_marginTop="98dp" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Student"
         android:id="@+id/studentButton"
-        android:layout_marginEnd="111dp"
         android:layout_alignTop="@+id/adminButton"
-        android:layout_alignParentEnd="true" />
+        android:layout_toEndOf="@+id/busLocatorTextView" />
+
+    <ImageView
+        android:layout_width="175dp"
+        android:layout_height="175dp"
+        android:id="@+id/imageView"
+        android:src="@drawable/bus_logo"
+        android:layout_below="@+id/busLocatorTextView"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="49dp" />
 
 </RelativeLayout>
