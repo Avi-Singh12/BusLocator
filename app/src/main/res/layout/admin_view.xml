@@ -83,9 +83,9 @@
             android:padding="15dp"
             android:background="@color/gray"
             android:id="@+id/busTextView7"
-            android:layout_marginEnd="115dp"
-            android:layout_above="@+id/busTextView3"
-            android:layout_toStartOf="@+id/busTextView2" />
+            android:layout_marginEnd="61dp"
+            android:layout_below="@+id/busMapTextView"
+            android:layout_toStartOf="@+id/busMapTextView" />
 
         <TextView
             android:layout_width="wrap_content"
