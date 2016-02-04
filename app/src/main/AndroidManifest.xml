@@ -18,6 +18,7 @@
         </activity>
         <activity android:name=".AdminLogin" />
         <activity android:name=".StudentView" />
+        <activity android:name=".AdminView" />
     </application>
     <uses-permission android:name="android.permission.INTERNET" />
 

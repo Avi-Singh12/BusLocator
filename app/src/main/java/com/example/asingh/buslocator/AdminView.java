@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import com.firebase.client.Firebase;
 
@@ -20,6 +21,7 @@ public class AdminView extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.admin_view);
+        Firebase.setAndroidContext(this);
 
         final Firebase myFirebase = new Firebase("https://tjbusfinder.firebaseio.com/");
 
@@ -36,24 +38,25 @@ public class AdminView extends Activity {
         final EditText bus11Field = (EditText) findViewById(R.id.busNum11);
         final EditText bus12Field = (EditText) findViewById(R.id.busNum12);
 
-        final Integer busSpot1 = Integer.parseInt(bus1Field.getText().toString());
-        final Integer busSpot2 = Integer.parseInt(bus2Field.getText().toString());
-        final Integer busSpot3 = Integer.parseInt(bus3Field.getText().toString());
-        final Integer busSpot4 = Integer.parseInt(bus4Field.getText().toString());
-        final Integer busSpot5 = Integer.parseInt(bus5Field.getText().toString());
-        final Integer busSpot6 = Integer.parseInt(bus6Field.getText().toString());
-        final Integer busSpot7 = Integer.parseInt(bus7Field.getText().toString());
-        final Integer busSpot8 = Integer.parseInt(bus8Field.getText().toString());
-        final Integer busSpot9 = Integer.parseInt(bus9Field.getText().toString());
-        final Integer busSpot10 = Integer.parseInt(bus10Field.getText().toString());
-        final Integer busSpot11 = Integer.parseInt(bus11Field.getText().toString());
-        final Integer busSpot12 = Integer.parseInt(bus12Field.getText().toString());
 
         final Button update = (Button) findViewById(R.id.updateButton);
 
         update.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                final Integer busSpot1 = Integer.parseInt(bus1Field.getText().toString());
+                final Integer busSpot2 = Integer.parseInt(bus2Field.getText().toString());
+                final Integer busSpot3 = Integer.parseInt(bus3Field.getText().toString());
+                final Integer busSpot4 = Integer.parseInt(bus4Field.getText().toString());
+                final Integer busSpot5 = Integer.parseInt(bus5Field.getText().toString());
+                final Integer busSpot6 = Integer.parseInt(bus6Field.getText().toString());
+                final Integer busSpot7 = Integer.parseInt(bus7Field.getText().toString());
+                final Integer busSpot8 = Integer.parseInt(bus8Field.getText().toString());
+                final Integer busSpot9 = Integer.parseInt(bus9Field.getText().toString());
+                final Integer busSpot10 = Integer.parseInt(bus10Field.getText().toString());
+                final Integer busSpot11 = Integer.parseInt(bus11Field.getText().toString());
+                final Integer busSpot12 = Integer.parseInt(bus12Field.getText().toString());
+
                 myFirebase.child("1").setValue(busSpot1);
                 myFirebase.child("2").setValue(busSpot2);
                 myFirebase.child("3").setValue(busSpot3);
@@ -66,6 +69,9 @@ public class AdminView extends Activity {
                 myFirebase.child("10").setValue(busSpot10);
                 myFirebase.child("11").setValue(busSpot11);
                 myFirebase.child("12").setValue(busSpot12);
+
+                Toast.makeText(AdminView.this, "Bus Locations Successfully Updated", Toast.LENGTH_SHORT).show();
+
             }
         });
 

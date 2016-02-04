@@ -19,6 +19,7 @@ public class StudentView extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.student_view);
+        Firebase.setAndroidContext(this);
 
         final Firebase myFirebase = new Firebase("https://tjbusfinder.firebaseio.com/");
 
