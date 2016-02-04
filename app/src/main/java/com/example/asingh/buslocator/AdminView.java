@@ -7,7 +7,10 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.firebase.client.DataSnapshot;
 import com.firebase.client.Firebase;
+import com.firebase.client.FirebaseError;
+import com.firebase.client.ValueEventListener;
 
 import java.util.HashMap;
 import java.util.List;
@@ -38,24 +41,170 @@ public class AdminView extends Activity {
         final EditText bus11Field = (EditText) findViewById(R.id.busNum11);
         final EditText bus12Field = (EditText) findViewById(R.id.busNum12);
 
+        myFirebase.child("1").addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+                bus1Field.setText(dataSnapshot.getValue().toString());
+            }
+
+            @Override
+            public void onCancelled(FirebaseError firebaseError) {
+
+            }
+        });
+
+        myFirebase.child("2").addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+                bus2Field.setText(dataSnapshot.getValue().toString());
+            }
+
+            @Override
+            public void onCancelled(FirebaseError firebaseError) {
+
+            }
+        });
+        myFirebase.child("3").addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+                bus3Field.setText(dataSnapshot.getValue().toString());
+            }
+
+            @Override
+            public void onCancelled(FirebaseError firebaseError) {
+
+            }
+        });
+        myFirebase.child("4").addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+                bus4Field.setText(dataSnapshot.getValue().toString());
+            }
+
+            @Override
+            public void onCancelled(FirebaseError firebaseError) {
+
+            }
+        });
+        myFirebase.child("5").addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+                bus5Field.setText(dataSnapshot.getValue().toString());
+            }
+
+            @Override
+            public void onCancelled(FirebaseError firebaseError) {
+
+            }
+        });
+        myFirebase.child("6").addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+                bus6Field.setText(dataSnapshot.getValue().toString());
+            }
+
+            @Override
+            public void onCancelled(FirebaseError firebaseError) {
+
+            }
+        });
+        myFirebase.child("7").addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+                bus7Field.setText(dataSnapshot.getValue().toString());
+            }
+
+            @Override
+            public void onCancelled(FirebaseError firebaseError) {
+
+            }
+        });
+        myFirebase.child("8").addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+                bus8Field.setText(dataSnapshot.getValue().toString());
+            }
+
+            @Override
+            public void onCancelled(FirebaseError firebaseError) {
+
+            }
+        });
+        myFirebase.child("9").addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+                bus9Field.setText(dataSnapshot.getValue().toString());
+            }
+
+            @Override
+            public void onCancelled(FirebaseError firebaseError) {
+
+            }
+        });
+        myFirebase.child("10").addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+                bus10Field.setText(dataSnapshot.getValue().toString());
+            }
+
+            @Override
+            public void onCancelled(FirebaseError firebaseError) {
+
+            }
+        });
+        myFirebase.child("11").addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+                bus11Field.setText(dataSnapshot.getValue().toString());
+            }
+
+            @Override
+            public void onCancelled(FirebaseError firebaseError) {
+
+            }
+        });
+        myFirebase.child("12").addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+                bus12Field.setText(dataSnapshot.getValue().toString());
+            }
+
+            @Override
+            public void onCancelled(FirebaseError firebaseError) {
+
+            }
+        });
 
         final Button update = (Button) findViewById(R.id.updateButton);
 
         update.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                final Integer busSpot1 = Integer.parseInt(bus1Field.getText().toString());
-                final Integer busSpot2 = Integer.parseInt(bus2Field.getText().toString());
-                final Integer busSpot3 = Integer.parseInt(bus3Field.getText().toString());
-                final Integer busSpot4 = Integer.parseInt(bus4Field.getText().toString());
-                final Integer busSpot5 = Integer.parseInt(bus5Field.getText().toString());
-                final Integer busSpot6 = Integer.parseInt(bus6Field.getText().toString());
-                final Integer busSpot7 = Integer.parseInt(bus7Field.getText().toString());
-                final Integer busSpot8 = Integer.parseInt(bus8Field.getText().toString());
-                final Integer busSpot9 = Integer.parseInt(bus9Field.getText().toString());
-                final Integer busSpot10 = Integer.parseInt(bus10Field.getText().toString());
-                final Integer busSpot11 = Integer.parseInt(bus11Field.getText().toString());
-                final Integer busSpot12 = Integer.parseInt(bus12Field.getText().toString());
+//                final Integer busSpot1 = Integer.parseInt(bus1Field.getText().toString());
+//                final Integer busSpot2 = Integer.parseInt(bus2Field.getText().toString());
+//                final Integer busSpot3 = Integer.parseInt(bus3Field.getText().toString());
+//                final Integer busSpot4 = Integer.parseInt(bus4Field.getText().toString());
+//                final Integer busSpot5 = Integer.parseInt(bus5Field.getText().toString());
+//                final Integer busSpot6 = Integer.parseInt(bus6Field.getText().toString());
+//                final Integer busSpot7 = Integer.parseInt(bus7Field.getText().toString());
+//                final Integer busSpot8 = Integer.parseInt(bus8Field.getText().toString());
+//                final Integer busSpot9 = Integer.parseInt(bus9Field.getText().toString());
+//                final Integer busSpot10 = Integer.parseInt(bus10Field.getText().toString());
+//                final Integer busSpot11 = Integer.parseInt(bus11Field.getText().toString());
+//                final Integer busSpot12 = Integer.parseInt(bus12Field.getText().toString());
+
+                final String busSpot1 = bus1Field.getText().toString();
+                final String busSpot2 = bus2Field.getText().toString();
+                final String busSpot3 = bus3Field.getText().toString();
+                final String busSpot4 = bus4Field.getText().toString();
+                final String busSpot5 = bus5Field.getText().toString();
+                final String busSpot6 = bus6Field.getText().toString();
+                final String busSpot7 = bus7Field.getText().toString();
+                final String busSpot8 = bus8Field.getText().toString();
+                final String busSpot9 = bus9Field.getText().toString();
+                final String busSpot10 = bus10Field.getText().toString();
+                final String busSpot11 = bus11Field.getText().toString();
+                final String busSpot12 = bus12Field.getText().toString();
 
                 myFirebase.child("1").setValue(busSpot1);
                 myFirebase.child("2").setValue(busSpot2);

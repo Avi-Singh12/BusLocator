@@ -7,13 +7,13 @@
     <RelativeLayout
         android:layout_width="fill_parent"
         android:layout_height="0dp"
-        android:layout_weight="1"
+        android:layout_weight="0.67"
         android:id="@+id/busMap"
         android:background="@color/babyblue">
 
         <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
             android:text="1"
             android:padding="15dp"
             android:background="@color/gray"
@@ -24,8 +24,8 @@
             android:layout_alignParentEnd="true" />
 
         <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
             android:text="2"
             android:padding="15dp"
             android:background="@color/gray"
@@ -35,50 +35,48 @@
             android:layout_toStartOf="@+id/busTextView1" />
 
         <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
             android:text="3"
             android:padding="15dp"
             android:background="@color/gray"
             android:id="@+id/busTextView3"
-            android:layout_marginTop="38dp"
             android:layout_below="@+id/busTextView1"
-            android:layout_alignStart="@+id/busTextView1" />
+            android:layout_toEndOf="@+id/busTextView2" />
 
         <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
             android:text="4"
             android:padding="15dp"
             android:background="@color/gray"
             android:id="@+id/busTextView4"
-            android:layout_alignBottom="@+id/busTextView3"
+            android:layout_below="@+id/busTextView2"
             android:layout_alignStart="@+id/busTextView2" />
 
         <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
             android:text="5"
             android:padding="15dp"
             android:background="@color/gray"
             android:id="@+id/busTextView5"
-            android:layout_marginTop="40dp"
-            android:layout_below="@+id/busTextView3"
-            android:layout_alignStart="@+id/busTextView3" />
+            android:layout_alignTop="@+id/busTextView6"
+            android:layout_toEndOf="@+id/busTextView2" />
 
         <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
             android:text="6"
             android:padding="15dp"
             android:background="@color/gray"
             android:id="@+id/busTextView6"
-            android:layout_alignTop="@+id/busTextView5"
+            android:layout_below="@+id/busTextView4"
             android:layout_alignStart="@+id/busTextView4" />
 
         <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
             android:text="7"
             android:padding="15dp"
             android:background="@color/gray"
@@ -88,19 +86,19 @@
             android:layout_toStartOf="@+id/busMapTextView" />
 
         <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
             android:text="8"
             android:padding="15dp"
             android:background="@color/gray"
             android:id="@+id/busTextView8"
-            android:layout_above="@+id/busTextView4"
-            android:layout_toStartOf="@+id/busTextView7"
-            android:layout_marginEnd="46dp" />
+            android:layout_marginEnd="46dp"
+            android:layout_above="@+id/busTextView10"
+            android:layout_toStartOf="@+id/busTextView9" />
 
         <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
             android:text="10"
             android:padding="15dp"
             android:background="@color/gray"
@@ -109,28 +107,28 @@
             android:layout_alignStart="@+id/busTextView8" />
 
         <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
             android:text="9"
             android:padding="15dp"
             android:background="@color/gray"
             android:id="@+id/busTextView9"
-            android:layout_above="@+id/busTextView5"
+            android:layout_below="@+id/busTextView7"
             android:layout_alignStart="@+id/busTextView7" />
 
         <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
             android:text="11"
             android:padding="15dp"
             android:background="@color/gray"
             android:id="@+id/busTextView11"
-            android:layout_toEndOf="@+id/busTextView8"
-            android:layout_below="@+id/busTextView6" />
+            android:layout_below="@+id/busTextView9"
+            android:layout_alignStart="@+id/busTextView9" />
 
         <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
             android:text="12"
             android:padding="15dp"
             android:background="@color/gray"
@@ -146,12 +144,21 @@
             android:id="@+id/busMapTextView"
             android:layout_above="@+id/busTextView2"
             android:layout_centerHorizontal="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="*Make sure to fill all spots"
+            android:id="@+id/textView8"
+            android:layout_alignParentBottom="true"
+            android:layout_alignStart="@+id/busTextView11" />
     </RelativeLayout>
 
     <RelativeLayout
         android:layout_width="fill_parent"
         android:layout_height="0dp"
-        android:layout_weight="1"
+        android:layout_weight="1.44"
         android:id="@+id/busList"
         android:background="@color/babyblue">
 
@@ -379,6 +386,7 @@
             android:id="@+id/busNum12"
             android:layout_alignTop="@+id/textView7"
             android:layout_toEndOf="@+id/textView7" />
+
     </RelativeLayout>
 
 </LinearLayout>
